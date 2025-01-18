@@ -92,7 +92,7 @@ main() {
     if [[ $UID -ne 0 ]]; then
         read -p "This script is running without sudo. Install for the current user [y/N]? " VAR
         if [[ $VAR =~ ^[Yy]$ ]]; then
-            TARGDIR="$HOME/.local/share/nautilus-python/extensions"
+            TARGDIR="$HOME/.local/share/nautilus/extensions"
             mkdir -p "$TARGDIR"
             cp_file "$TARGDIR"
         else
