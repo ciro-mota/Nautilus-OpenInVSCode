@@ -1,12 +1,11 @@
 #!/bin/bash
 
-
-restart_nautilus()
+restart_nautilus() 
 {
-    read -p "Do you want restart Nautilus (Files) [Y/n]? " VAR
-    if [[ $VAR = 'y' || $VAR = 'Y' ]]; then
+    read -p "Do you want to restart Nautilus (Files) [Y/n]? " VAR
+    if [[ $VAR =~ ^[Yy]$ ]]; then
         nautilus -q
-    fi    
+    fi
 }
 cp_file() {
     FILE=vscode-nautilus.py
